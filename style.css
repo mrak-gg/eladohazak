@@ -4,25 +4,29 @@
 }
 
 :root {
-    --btItim: "Itim", cursive;
-    --btInder: "Inder", sans-serif;
-    --btImprima: "Imprima", sans-serif;
-    --btInknut: "Inknut Antiqua", serif;
-    --btInter: "Inter", sans-serif;
+    --btJost: "Jost", sans-serif;
+    --btOld: "Old Standard TT", serif;
 }
 
-.gomb {
+button {
     width: 12vw;
     height: 6vh;
 
-    color: black;
-    font-family: var(--btInder);
+    color: white;
+    font-family: var(--btJost);
     font-size: 1.25vw;
     
-    border-radius: 0.5vw;
-    border: 1px solid black;
+    border: none;
 
-    background: none;
+    background: #BD8C62;
+}
+
+.csik {
+    width: 20%;
+    height: 1px;
+
+    background-color: #BD8C62;
+    margin: 0 auto;
 }
 
 .kezdooldal::before {
@@ -47,22 +51,18 @@
         align-items: center;
         justify-content: space-evenly;
 
-        width: 100%;
-        height: 12vh;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 75%;
+        height: 11vh;
 
         & p {
             color: white;
 
-            font-family: var(--btInter);
+            font-family: var(--btJost);
             font-weight: 400;
             font-size: 1.5vw;
-        }
-
-        .logo {
-            width: 5vw;
-            height: 5vw;
-
-            background: url(logo.png) center/cover no-repeat;
         }
     }
 
@@ -73,15 +73,15 @@
         align-items: flex-start;
 
         margin-left: 10vw;
-        margin-top: 8vh;
+        margin-top: 17.5vh;
         width: 60%;
-        height: 65vh;
+        height: 50vh;
 
         & span {
-            color: #D7FF67;
+            color: #BD8C62;
 
-            font-family: var(--btInknut);
-            font-weight: 900;
+            font-family: var(--btOld);
+            font-weight: 700;
             font-size: 3.25vw;
 
             padding-left: 0.5vw;
@@ -91,22 +91,9 @@
             width: 70%;
 
             color: white;
-            font-family: var(--btImprima);
+            font-family: var(--btJost);
+            font-weight: 300;
             font-size: 1.33vw;
-        }
-
-        & button {
-            width: 12vw;
-            height: 6vh;
-        
-            color: white;
-            font-family: var(--btInder);
-            font-size: 1.25vw;
-            
-            border-radius: 0.5vw;
-            border: 1px solid white;
-        
-            background: rgba(255, 255, 255, 0.25);
         }
     }
 }
@@ -115,10 +102,11 @@
     width: 100%;
     height: 100vh;
 
-    background: #E9E9E9;
+    background: #1A1B1D;
 
     display: flex;
     align-items: center;
+
     & .baloldal {
         display: flex;
 
@@ -128,7 +116,7 @@
         & div {
             width: 100%;
             height: 100%;
-            padding-left: 10vw;
+            margin-left: 7.5vw;
 
             word-break: break-word;
 
@@ -138,20 +126,22 @@
 
             & h1 {
                 width: 75%;
-    
-                font-family: var(--btItim);
+                
+                color: #BD8C62;
+                font-family: var(--btOld);
                 font-size: 3.125vw;
             }
     
             & span {
-                color: #485F07;
-                font-family: var(--btImprima);
+                color: #BD8C62;
+                font-family: var(--btJost);
                 font-size: 1.75vw;
             }
 
             & p {
-                font-family: var(--btImprima);
-                font-size: 1.2vw;
+                color: white;
+                font-family: var(--btJost);
+                font-size: 1.25vw;
             }
 
             & button {
@@ -172,8 +162,7 @@
                 width: 25vw;
                 height: 25vw;
 
-                border: 5px solid black;
-                border-radius: 1vw;
+                border: 5px solid #BD8C62;
 
                 position: relative;
                 left: 12.5%;
@@ -190,6 +179,185 @@
                 z-index: 1;
                 transform: translate(50%, -50%);
             }
+        }
+    }
+}
+
+.ajanlataink {
+    width: 100%;
+    height: 100vh;
+
+    background: #2B2C30;
+
+    display: flex;
+
+    & .baloldal {
+        width: 50%;
+        height: inherit;
+        
+        display: flex;
+
+        & .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            margin-left: 7.5vw;
+
+            & h1 {
+                width: 75%;
+
+                color: #BD8C62;
+                font-family: var(--btOld);
+                font-weight: 400;
+                font-size: 3.25vw;
+            }
+    
+            & .kep {
+                width: 40vw;
+                height: 45vh;
+                
+                margin-top: 5vh;
+
+                border: 5px solid #BD8C62;
+                background: url(kep3.png) center/cover no-repeat;
+            }
+        }
+    }
+
+    & .jobboldal {
+        width: 50%;
+        height: inherit;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        & .kep {
+            width: 40vw;
+            height: 45vh;
+
+            border: 5px solid #BD8C62;
+            background: url(kep4.png) center/cover no-repeat;
+        }
+
+        & span, p {
+            width: 40vw;
+
+            font-family: var(--btJost);
+            text-align: justify;
+        }
+
+        & span {
+            color: white;
+            font-size: 1.25vw;
+        }
+
+        & p {
+            color: #BD8C62;
+
+            font-size: 1.75vw;
+        }
+    }
+}
+
+.berelheto {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #1A1B1D;
+
+    & h1 {
+        color: #BD8C62;
+        font-family: var(--btOld);
+        font-weight: 400;
+        font-size: 3vw;
+        text-align: center;
+        padding-top: 4vh;
+    }
+
+    & .container {
+        width: 80%;
+        height: 80vh;
+        margin: 0 auto;
+        padding-top: 8vh;
+
+        display: flex;
+        justify-content: space-evenly;
+
+        & .kep {
+            width: 40%;
+            height: 90%;
+
+            border: 5px solid #BD8C62;
+            background: url(kep1.png) center/cover no-repeat;
+        }
+
+        & .jobboldal {
+            width: 45%;
+            height: 90%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            font-family: var(--btJost);
+
+            & p {
+                color: white;
+                font-weight: 300;
+                font-size: 1.25vw;
+                text-align: justify;
+            }
+
+            & h2 {
+                color: #BD8C62;
+                font-size: 2.25vw;
+                font-weight: 400;
+                padding-bottom: 1vh;
+            }
+        }
+    }
+}
+
+.galeria {
+    width: 100%;
+    height: 80vh;
+
+    background: #1A1B1D;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h1 {
+        color: #BD8C62;
+        font-family: var(--btOld);
+        font-weight: 400;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    & .csik {
+        width: 10%;
+    }
+
+    & .kepek {
+        width: 80%;
+        height: 40vh;
+        padding-top: 6vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 2vw;
+
+        & img {
+            width: 15vw;
+            height: 15vw;
+            object-fit: cover;
         }
     }
 }
