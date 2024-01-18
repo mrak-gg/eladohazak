@@ -16,12 +16,12 @@
 <body>
     <div class="kezdooldal">
         <nav>
-            <p>KEZDŐLAP</p>
-            <p>CÉGÜNKRŐL</p>
-            <p>AJÁNLATAINK</p>
-            <p>KAPCSOLAT</p>
+            <p><a href="#kezdolap" class="scroll-link">KEZDŐLAP</a></p>
+            <p><a href="#cegunkrol" class="scroll-link">CÉGÜNKRŐL</a></p>
+            <p><a href="#berelheto" class="scroll-link">AJÁNLATAINK</a></p>
+            <p><a href="#kapcsolat" class="scroll-link">KAPCSOLAT</a></p>
         </nav>
-        <section>
+        <section class="fade-in">
             <span>ELADÓLAKÁSOK KFT.</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo sapien erat, sit amet auctor mauris interdum et. Ut sit amet scelerisque quam. Donec et lectus commodo, placerat velit at, posuere enim. Fusce et justo vitae nibh feugiat.</p>
             <button>CONTACT US</button>
@@ -94,6 +94,54 @@
             <img src="kep6.png" alt="">
             <img src="kep8.png" alt="">
             <img src="kep2.png" alt="">
+        </div>
+    </div>
+
+    <div class="kapcsolat">
+        <div class="baloldal">
+            <div class="content">
+                <h1>CONTACT US</h1>
+                <p>Suspendisse in dolor sed est elementum faucibus. Cras in velit sit amet arcu sollicitudin pretium. In lectus urna, suscipit sed leo sed, feugiat varius est. Integer vel luctus lectus, nec efficitur enim. Proin id fermentum libero, eu auctor leo. Fusce vel molestie nunc. Aliquam eu mi sed lorem vehicula fringilla quis quis leo. Integer eleifend pellentesque nibh vitae rutrum. Nunc iaculis, sapien sed </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39163.86416820032!2d19.080590056021094!3d47.49524007208441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc1046d4a33d%3A0x342122b8ff8f0f6e!2sHungarian%20Parliament%20Building!5e0!3m2!1sen!2srs!4v1705583682188!5m2!1sen!2srs" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+            </div>
+        </div>
+        <div class="jobboldal">
+            <form action="action.html">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter a valid email address">
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10" required placeholder="Enter your message"></textarea>
+                </div>
+                
+                <input type="submit" value="SUBMIT" class="gomb">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content">
+            <div class="bal">
+                <div>
+                    <p>Email: example@email.com</p>
+                    <p>Address: Pelda ut. 63, Budapest</p>
+                </div>
+            </div>
+            <div class="kozep">
+                <p>2023 - All right reserved</p>
+            </div>
+            <div class="jobb">
+                <div>
+                    <p>Phone: +3630621363</p>
+                    <p>Web: <a href="https://example.com">example.com</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
