@@ -72,10 +72,6 @@ a {
 
     background: url(kep1.png) center/cover no-repeat;
 
-    & i {
-        display: none;
-    }
-
     & nav {
         display: flex;
         align-items: center;
@@ -164,7 +160,11 @@ a {
         width: 50%;
         height: 80vh;
 
-        & div {
+        & .mobilKepek {
+            display: none;
+        }
+
+        & .szoveg {
             width: 100%;
             height: 100%;
             margin-left: 7.5vw;
@@ -205,11 +205,11 @@ a {
         width: 50%;
         height: 100vh;
 
-        .kepek {
+        & .kepek {
             width: 100%;
             height: 100%;
 
-            .kep1, .kep2 {
+            & .kep1, .kep2 {
                 width: 25vw;
                 height: 25vw;
 
@@ -220,18 +220,22 @@ a {
                 top: 12.5%;
             }
 
-            .kep1 {
+            & .kep1 {
                 background: url(kep2.png) center/cover no-repeat;
                 z-index: 0;
             }
 
-            .kep2 {
+            & .kep2 {
                 background: url(kep1.png) center/cover no-repeat;
                 z-index: 1;
                 transform: translate(50%, -50%);
             }
         }
     }
+}
+
+.ajanlatainkMobil {
+    display: none;
 }
 
 .ajanlataink {
@@ -271,7 +275,7 @@ a {
                 margin-top: 5vh;
 
                 border: 5px solid #BD8C62;
-                background: url(kep3.png) center/cover no-repeat;
+                background: url(kep9.jpg) center/cover no-repeat;
             }
         }
     }
@@ -290,7 +294,7 @@ a {
             height: 45vh;
 
             border: 5px solid #BD8C62;
-            background: url(kep4.png) center/cover no-repeat;
+            background: url(kep10.jpg) center/cover no-repeat;
         }
 
         & span, p {
@@ -342,7 +346,7 @@ a {
             height: 90%;
 
             border: 5px solid #BD8C62;
-            background: url(kep1.png) center/cover no-repeat;
+            background: url(kep11.jpg) center/cover no-repeat;
         }
 
         & .jobboldal {
@@ -370,6 +374,10 @@ a {
             }
         }
     }
+}
+
+.berelhetoMobil {
+    display: none;
 }
 
 .galeria {
@@ -411,6 +419,10 @@ a {
             object-fit: cover;
         }
     }
+}
+
+.galeriaMobil {
+    display: none
 }
 
 .kapcsolat::before {
@@ -462,7 +474,7 @@ a {
                 font-size: 1.3vw;
             }
 
-            & iframe {
+            & .mapsDesktop {
                 border: 0;
                 width: 75%;
                 height: 55%;
@@ -509,6 +521,10 @@ a {
             }
         }
     }
+
+    & .mapsMobile {
+        display: none;
+    }
 }
 
 .footer {
@@ -545,6 +561,11 @@ a {
 /* MOBIL NEZET */
 
 @media  (max-width: 850px) {
+
+    body {
+        background-color: #1A1B1D;
+    }
+
     button, .gomb {
         width: 30vw;
         height: 5vh;
@@ -553,6 +574,8 @@ a {
     }
 
     .kezdooldal {
+        height: 100vh;
+
         & nav {
             display: none;
         }
@@ -579,34 +602,386 @@ a {
                 text-align: center;
             }
         }
-
-        & i {
-            display: block;
-            color: white;
-            font-size: 3.25vh;
-            position: absolute;
-
-            right: 5%;
-            top: 2%;
-        }
     }
 
     .cegunkrol {
+        height: 150vh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
         & .baloldal {
-            width: 100%;
+            width: 75%;
+            height: 100%;
 
-            & div {
-                margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & .szoveg {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                height: 75%;
+                width: 100%;
+
+                margin-left: 0;
+                margin-top: 5vh;
 
                 & h1 {
-                    
+                    font-size: 3.1vh;
+                    font-weight: 400;
+                }
+
+                & span {
+                    font-size: 2.1vh;
+                }
+
+                & p {
+                    font-size: 1.85vh;
+                    font-weight: 300;
+                }
+
+                & button {
+                    display: none;
+                }
+            }
+
+            & .mobilKepek {
+                width: 100%;
+                height: 130%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                & .kep1, .kep2 {
+                    width: 75vw;
+                    height: 75vw;
+                    border: 5px solid #BD8C62;
+                }
+
+                & .kep1 {
+                    background: url(kep1.png) center/cover no-repeat;
+                }
+
+                & .kep2 {
+                    background: url(kep1.png) center/cover no-repeat;
                 }
             }
         }
 
         & .jobboldal {
             display: none;
+        }
+    }
+
+    .ajanlataink {
+        display: none;
+    }
+
+    .ajanlatainkMobil {
+        width: auto;
+        height: 150vh;
+
+        background: #2B2C30;
+        display: flex;
+        justify-content: center;
+
+        .content {
+            width: 75%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & .kep1, .kep2 {
+                width: 75vw;
+                height: 75vw;
+
+                border: 5px solid #BD8C62;
+            }
+
+            & .kep1 {
+                background: url(kep9.jpg) center/cover no-repeat;
+            }
+
+            & .kep2 {
+                background: url(kep10.jpg) center/cover no-repeat;
+            }
+
+            & h1 {
+                color: #BD8C62;
+                font-family: var(--btOld);
+                font-size: 3.5vh;
+                font-weight: 400;
+            }
+
+            & span {
+                font-family: var(--btJost);
+                color: #BD8C62;
+                font-size: 2.5vh;
+            }
+
+            & p {
+                font-family: var(--btJost);
+                color: white;
+                font-size: 2.25vh;
+                font-weight: 300;
+            }
+
+            & button {
+                width: 40vw;
+                height: 5vh;
+
+                align-self: flex-start;
+            }
+        }
+    }
+
+    .berelheto {
+        display: none;
+    }
+
+    .berelhetoMobil {
+        width: auto;
+        height: 100vh;
+
+        background: #1A1B1D;
+        display: flex;
+        justify-content: center;
+
+        & .content {
+            width: 75%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & h1 {
+                width: 100vw;
+
+                color: #BD8C62;
+                font-family: var(--btOld);
+                font-size: 3.2vh;
+                font-weight: 400;
+
+                text-align: center;
+            }
+
+            & .csik {
+                width: 35%;
+                margin-top: 1vh;
+            }
+
+            & span {
+                width: 100%;
+
+                font-family: var(--btJost);
+                color: #BD8C62;
+                font-size: 2.5vh;
+
+                text-align: left;
+            }
+
+            & p {
+                font-family: var(--btJost);
+                color: white;
+                font-size: 2.25vh;
+                font-weight: 300;
+            }
+
+            & .kep {
+                width: 75vw;
+                height: 75vw;
+
+                border: 5px solid #BD8C62;
+
+                background: url(kep11.jpg) center/cover no-repeat;
+            }
+
+            & button {
+                width: 40vw;
+                height: 5vh;
+
+                font-size: 1.6vh;
+
+                align-self: flex-start;
+            }
+        }
+    }
+
+    .galeria {
+        display: none
+    }
+
+    .galeriaMobil {
+        width: auto;
+        height: 220vh;
+
+        background: #1A1B1D;
+        display: flex;
+        justify-content: center;
+
+        & .content {
+            width: 75%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & h1 {
+                width: 100vw;
+
+                color: #BD8C62;
+                font-family: var(--btOld);
+                font-size: 3.2vh;
+                font-weight: 400;
+
+                text-align: center;
+            }
+
+            & .csik {
+                width: 20%;
+                margin-top: 1vh;
+            }
+
+            & .kep {
+                width: 75vw;
+                height: 75vw;
+
+                border: 5px solid #BD8C62;
+            }
+
+            & .elso {
+                background: url(kep1.png) center/cover no-repeat;
+            }
+
+            & .masodik {
+                background: url(kep2.png) center/cover no-repeat;
+            }
+
+            & .harmadik {
+                background: url(kep3.png) center/cover no-repeat;
+            }
+
+            & .negyedik {
+                background: url(kep4.png) center/cover no-repeat;
+            }
+
+            & .otodik {
+                background: url(kep5.png) center/cover no-repeat;
+            }
+        }
+    }
+
+    .kapcsolat {
+        flex-direction: column;
+        height: 135vh;
+
+        & .baloldal {
+            width: 100%;
+            height: 32%;
+
+            display: flex;
+            justify-content: center;
+
+            & .content {
+                margin-left: 0;
+                width: 75%;
+
+                align-items: center;
+
+                & h1 {
+                    font-size: 3.5vh;
+                }
+                
+                & p {
+                    font-size: 2vh;
+
+                    text-align: center;
+                }
+
+                & iframe {
+                    display: none;
+                }
+            }
+        }
+
+        & .jobboldal {
+            width: 100%;
+            height: 40%;
+
+            justify-content: center;
+
+            & form {
+                width: 75%;
+                align-items: center;
+                
+                padding-left: 0;
+
+                & div {
+                    justify-content: space-evenly;
+
+                    & label {
+                        font-size: 1.75vh;
+                    }
+
+                    & input, textarea {
+                        width: 70vw;
+                        height: 2.5vh;
+
+                        font-size: 1.25vh;
+                    }
+
+                    & textarea {
+                        height: 15vh;
+                    }
+                }
+
+                & .gomb {
+                    width: 71vw;
+
+                    margin-top: 2vh;
+                    margin-bottom: 2dvb;
+                }
+            }
+        }
+
+        & .mapsMobile {
+            display: flex;
+            border: 0;
+            width: 70vw;
+            height: 70vw;
+
+            border: 5px solid #BD8C62;
+        }
+    }
+
+    .footer {
+        height: 15vh;
+
+        & .content {
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            & .bal, .kozep, .jobb {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                font-size: 1.25vh;
+            }
         }
     }
 }
